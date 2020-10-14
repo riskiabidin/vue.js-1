@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <link href="node_modules/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        {{ pesan }}
+
+
+    </div>
+    <div id="app2" style=" margin: 25px; width: 500px;">
+        <!-- {{pesan}} -->
+        <div class="card card-primary">
+            <div class="card-header" style="text-align: center;">Form Login</div>
+            <div class="card-body">
+                <!-- {{pesan}} -->
+                <br>
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="password" v-model="isi" class="form-control" placeholder="type-password">
+                </div>
+                <div class="form-group">
+                    <label for="re-password">re-password</label>
+                    <input type="password" v-model="isi2" class="form-control" placeholder="re-type password">
+                </div>
+                <p v-html="keterangan"></p>
+                <button class="btn btn-primary btn-block" v-if="tampil">SignUp </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="apps.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <link href="node_modules/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app5" style=" margin: 25px; width: 500px;">
+        <div class="card card-primary">
+            <div class="card-header" style="text-align: center;">v-bind</div>
+            <div class="card-body">
+                {{pesan}} <br>
+                <button class="btn btn-primary" v-on:click="keterangan='coba menggunakan even'">klick untuk melihat
+                    pesan</button>
+                <button class="btn btn-warning" @click="keterangan=''">tutup pesan</button>
+                <br>
+                <p>{{keterangan}}</p>
+                <hr>
+                <b>v-on:click dengan methods</b>
+                <br>
+                <button @click="dilihat('ini pesan')">klik untuk melihat pesan</button>
+                <hr>
+                <b>hitung</b><br>
+                <label for="bilangan1">bilangan1</label>
+                <input type="text" v-model="bilangan1"><br>
+                <label for="bilangan2">bilangan2</label>
+                <input type="text" v-model="bilangan2"><br>
+                <button class="btn btn-primary" @click="dihitung">hitung</button>
+                <button class="btn btn-danger" @click="dihapus">hapus</button>
+                <p>penjumlahan->{{bilangan1}} + {{bilangan2}}={{penjumlahan}}</p>
+                <p>pengurangan->{{bilangan1}} - {{bilangan2}}={{pengurangan}}</p>
+                <p>perkalian ->{{bilangan1}} * {{bilangan2}}={{perkalian}}</p>
+                <p>pembagian ->{{bilangan1}} / {{bilangan2}}={{pembagian}}</p>
+                <hr>
+                <input type="text" @keyup.enter='xxx' @keyup.esc='xxx' @keyup.ctrl.88='xxx' v-model="tulis1"> <br>
+                <!-- @keyup.enter
+                @keyup.esc
+                @keyup.space
+                @keyup.up
+                @keyup.down
+                @keyup.right
+                @keyup.left
+                @keyup.ctrl -->
+                <p>pesan anda adalah= {{hasiltulis1}}</p>
+                <hr>
+                <b>mouse handler</b><br>
+                <input type="text" @click.left='left' @click.right='right'> {{leftx}}
+                <br><br>
+                <hr>
+                <b>toogle</b><br>
+                <button class="btn btn-success" @click='tampak=!tampak'>Toogle</button>
+                <b v-show='tampak'>tulisan yang ditampilkan</b>
+                <br>
+                <br>
+                <button class="btn btn-primary" :key="isEditing" @click='isEditing=!isEditing'>{{isEditing?'save':'edit'}}</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="apps.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <link href="node_modules/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app3" style=" margin: 25px; width: 500px;">
+        <b>textbox</b><br>
+        <input type="text" v-model="pesan" placeholder="ketik pesan anda disini"><br>
+        pesan anda adalah:
+        <p>{{pesan}}</p>
+        <hr>
+        <b>textarea</b><br>
+        <textarea name="" id="" cols="30" rows="5" v-model="pesan2"></textarea>
+        <br>
+        pesan anda adalah:
+
+        <p style="white-space: pre-line;">{{pesan2}} </p>
+        <hr>
+        <b>raadio button</b><br>
+        <input type="radio" v-model="pilih" value="menikah">menikah
+        <br> <input type="radio" v-model="pilih" value="s2">S2
+        <br>pilihan anda adalah:
+        <p>{{pilih}}</p>
+        <hr>
+        <b>checkbox</b><br>
+        <br><br>
+        <b>pilih hoby</b><br>
+        <input type="checkbox" v-model="ceklis" value="sepak bola">sepak bola <br>
+        <input type="checkbox" v-model="ceklis" value="bulu tangkis">bulu tangkis <br>
+        <input type="checkbox" v-model="ceklis" value="silat">silat <br>
+        <p>hoby yang dipilih: {{ceklis}}</p>
+        <ul>
+            <li v-for="c in ceklis">{{c}}</li>
+        </ul>
+        <hr>
+        <b>dropdown</b><br>
+        <b>pilih kota</b>
+        <select v-model="select" name="" id="">
+            <option disabled value="">pilih kota anda</option>
+            <option>jakarta</option>
+            <option>jawa tengah</option>
+            <option>papua</option>
+        </select>
+        <p>kota yang dipilih:{{select}}</p>
+        <br>        <b>pilih kota</b>
+        <select v-model="select2" name="" id="">
+            <option disabled value="">pilih kota anda</option>
+            <option value="ibu kota">jakarta</option>
+            <option value="provinsi jawa tengah">jawa tengah</option>
+            <option value="provinsi papua">papua</option>
+        </select>
+        <p>kota yang dipilih:{{select2}}</p>
+
+    </div>
+
+    <script src="apps.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ pesan }}
+        <br>
+        xx{{ pesan }}
+        <br>
+        <p v-html="pesan2"></p>
+        <p v-text="pesan3"></p>
+        <hr>
+        <p>contoh text:{{text}}</p>
+        <p>contoh bilangan bulat:{{angka1}}</p>
+        <p>contoh bilangan titik kambang:{{angka2}}</p>
+        <p>contoh pilihan benar:{{pilihan1}}</p>
+        <p>contoh pilihan salah:{{pilihan2}}</p>
+        <p>contoh array:{{array}}</p>
+        <hr>
+        <h3>Conditional (pengandaian)</h3>
+        <p v-if="pilihan2">{{pesan}}</p>
+        <i>negasi:!(bukan/tidak)</i>
+        <p v-if="!pilihan2">{{pesan}}</p>
+        <i>memberi nilai pada v-if</i>
+        <p v-if="tampil=='ada'">{{pesan}}</p>
+        <i>v-show</i>
+        <p v-show="tampil=='ada'">{{pesan}}</p>
+        <i>pasangan v-if == v-else</i>
+        <p v-if="pilihan2">{{pesan}}</p>
+        <p v-else="pilihan2"><i v-html="pesan2"></i></p>
+        <hr>
+        <p>hasil dari {{bil1}}+{{bil2}} adalah:{{jumlah}}</p>
+        <i>method:</i>
+        <p>hasil dari {{bil1}}+{{bil2}} adalah:{{hasil}}</p>
+        <button v-on:click="diproses">diproses</button>
+        <button v-on:click="hapushasil">hapus</button>
+        <br>
+        <p>hasil dari {{bil1}}+{{bil2}} adalah:{{jumlah}}</p>
+        <p>hasil dari {{bil1}}-{{bil2}} adalah:{{kurang}}</p>
+        <p>hasil dari {{bil1}}/{{bil2}} adalah:{{bagi}}</p>
+        <p>hasil dari {{bil1}}*{{bil2}} adalah:{{kali}}</p>
+        <br><br>
+        <button v-on:click="dihitung">diproses</button>
+        <button v-on:click="dihapus">diproses</button><br>
+        <p>hasil dari {{bil1}}+{{bil2}} adalah:{{penjumlahan}}</p>
+        <p>hasil dari {{bil1}}-{{bil2}} adalah:{{pengurangan}}</p>
+        <p>hasil dari {{bil1}}/{{bil2}} adalah:{{pembagian}}</p>
+        <p>hasil dari {{bil1}}*{{bil2}} adalah:{{perkalian}}</p>
+        <hr>
+        <i>watcher:</i>
+        <input type="text" v-model="isi">{{keterangan}}
+        <br>
+        <input type="text" v-model="isi2">{{keterangan2}}
+        <br>
+        <br>
+        <input type="text" v-model="isi3">{{keterangan3}}
+        <br>
+        <br>
+        <input type="text" v-model="isi4"> <span style="color: red;">{{keterangan4}}</span>
+
+    </div>
+    <script src="apps.js"></script>
+
+</body>
+
+</html>

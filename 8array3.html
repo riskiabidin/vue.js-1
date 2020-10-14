@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <link href="node_modules/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app8" style=" margin: 25px;">
+        <div class="card card-primary">
+            <div class="card-header">Array</div>
+            <div class="card-body">
+                <!-- {{pesan}} -->
+                <ul>
+                    <li v-for="b in barang" v-text="b.jenis"></li>
+                </ul>
+                <hr>
+                <h2>seluruh yang masih tersisa</h2>
+                <ul>
+                    <li v-for="b in barangAda" v-text="b.jenis"></li>
+                </ul>
+                <hr>
+                <h2>seluruh barang yang tidak tersedia</h2>
+                <ul>
+                    <li v-for="b in barangHabis" v-text="b.jenis"></li>
+                </ul>
+                <hr>
+                <b v-for="x in 10">
+                    {{x}}
+                </b>
+                <hr>
+                <b v-for="y in 10" v-if="y !=2">
+                    {{y}}
+                </b>
+                <hr>
+                <input type="text" v-model="cari" placeholder="cari berdasarkan merk"><br>
+                <ul v-for="kd in filterKendaraan">
+                    <li>
+                        jenisnya:{{kd.jenis}},
+                        merknya:{{kd.merk}},
+                        warnanya:{{kd.warna}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="apps.js"></script>
+</body>
+
+</html>

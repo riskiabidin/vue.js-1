@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <link href="node_modules/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div id="app4" style=" margin: 25px; width: 500px;">
+        <div class="card card-primary">
+            <div class="card-header" style="text-align: center;">v-bind</div>
+            <div class="card-body">
+                {{pesan}} <br>
+                <img :src="imageSrc" alt="gambar" :style="{width:lebar+'px'}" :title="keterangan">
+            </div>
+            <br>
+            <b :title="pesan">arahkan kursor disini</b>
+        </div>
+    </div>
+
+    <script src="apps.js"></script>
+
+</body>
+
+</html>

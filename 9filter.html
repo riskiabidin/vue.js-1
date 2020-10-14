@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <link href="node_modules/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app9" style=" margin: 25px;">
+        <div class="card card-primary">
+            <div class="card-header">Array</div>
+            <div class="card-body">
+                {{pesan}}
+                <br>huruf kapital semua:
+                <b>
+                    {{pesan | kapital}}
+                </b>
+                <br>huruf kecil semua:
+                <b>
+                    {{pesan | kecil}}
+                </b>
+                <hr>
+                teks: {{pesan}}
+                <br>
+                jika hurufnya dibalik akan menjadi:
+                <b>
+                    {{pesan | terbalik}}
+                </b>
+                <br>
+                jika katanya dibalik akan menjadi:
+                <b>
+                    {{pesan | terbalik2}}
+                </b>
+                <hr>
+                normal: {{pesan}}
+                <br>
+                huruf kapital diawal:
+                <b>
+                    {{pesan | capitalize}}
+                </b>
+            </div>
+        </div>
+    </div>
+
+    <script src="apps.js"></script>
+</body>
+
+</html>
