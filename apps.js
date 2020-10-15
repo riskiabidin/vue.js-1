@@ -1,3 +1,19 @@
+Vue.component('tebal', {
+    template: '<b>tulisan tebal ini berasal dari component</b>'
+});
+Vue.component('tebal2', {
+    template: '<b><slot></slot></b>'
+});
+Vue.component('multi', {
+    template: `
+    <div>
+                    <b>ini adalah tulisan tebal</b> <br>
+                    <i>ini adalah tulisan miring</i><br>
+                    <u>ini adalah tulisan bergaris bawah</u>
+                </div>
+    `
+})
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -264,6 +280,9 @@ var mk = new Vue({
             this.isi4 = null
         },
         hapusData(index) {
+            // this.isi4=this.makanan[index].total
+            // this.jumlah -= this.isi4
+            // this.jumlah -= this.makanan[index].total
             this.makanan.splice(index, 1)
 
 
@@ -319,19 +338,19 @@ var filter = new Vue({
             value = value.toString()
             return value.toLowerCase()
         },
-        terbalik(value){
-            if(!value) return ''
-            value=value.toString()
+        terbalik(value) {
+            if (!value) return ''
+            value = value.toString()
             return value.split('').reverse().join('')
         },
-        terbalik2(value){
-            if(!value) return ''
-            value=value.toString()
+        terbalik2(value) {
+            if (!value) return ''
+            value = value.toString()
             return value.split(' ').reverse().join(' ')
         },
-        capitalize(value){
-            if(!value) return ''
-            value=value.toString()
+        capitalize(value) {
+            if (!value) return ''
+            value = value.toString()
             return value.charAt(0).toUpperCase() + value.slice(1)
         }
     }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <link href="node_modules/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style=" margin: 25px;" id="app">
+        <div class="card card-primary">
+            <div class="card-header">component</div>
+            <div class="card-body">
+                {{pesan}}
+                <br>
+                <b>penggunaan component:</b><br>
+                <tebal></tebal><br>
+                <tebal></tebal><br>
+                <tebal></tebal><br>
+                <tebal></tebal><br>
+                <hr>
+                <b>penggunaan component & slot:</b><br>
+                <tebal2>hai apa kabar</tebal2>
+                <hr>
+                <b>penggunaan multiple element in component:</b><br>
+                <multi></multi>
+                <hr>
+                <b>penggunaan component, slot & array:</b>
+            </div>
+        </div>
+    </div>
+
+    <script src="apps.js"></script>
+</body>
+
+</html>
