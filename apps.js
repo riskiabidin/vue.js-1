@@ -12,8 +12,40 @@ Vue.component('multi', {
                     <u>ini adalah tulisan bergaris bawah</u>
                 </div>
     `
-})
+});
+Vue.component('daftar', {
+    template: `<div><siswa v-for="s in daftarsiswa">{{s.nama}} kelas:{{s.kelas}}</siswa></div>`,
+    data: function () {
+        return {
+            daftarsiswa: [
+                { nama: 'eha', kelas: 'XII' },
+                { nama: 'riski', kelas: 'XI' },
+                { nama: 'sri', kelas: 'X' },
+            ]
+        };
+    }
+});
 
+Vue.component('siswa', {
+    template: '<li><slot></slot></li>'
+});
+Vue.component('karya', {
+    props: ['judul', 'isi'],
+    template: `
+<div>
+                    <h2>
+                        {{judul}}
+                    </h2>
+                    <p>
+                        {{isi}}
+                    </p>
+                </div>`
+});
+
+Vue.component('test',{
+    props:['nilai1','nilai2'],
+    template:`<div> <b>{{nilai1}}</b> dengan<b>{{nilai2}}</b></div>`
+});
 var app = new Vue({
     el: '#app',
     data: {
@@ -353,5 +385,12 @@ var filter = new Vue({
             value = value.toString()
             return value.charAt(0).toUpperCase() + value.slice(1)
         }
+    }
+});
+var component=new Vue({
+    el:'#app10',
+    data:{
+        pesan:'belajar vue.js',
+        pesan2:'semangat'
     }
 });
