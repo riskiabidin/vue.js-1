@@ -42,9 +42,25 @@ Vue.component('karya', {
                 </div>`
 });
 
-Vue.component('test',{
-    props:['nilai1','nilai2'],
-    template:`<div> <b>{{nilai1}}</b> dengan<b>{{nilai2}}</b></div>`
+Vue.component('test', {
+    props: ['nilai1', 'nilai2'],
+    template: `<div> <b>{{nilai1}}</b> dengan<b>{{nilai2}}</b></div>`
+});
+// Vue.component('nama', {
+//     template: " <input type='text' placeholder = 'masukan nama' @blur = 'validasi'> </input>",
+//     methods: {
+//         validasi(){
+//             this.$emit('applied')
+//         }
+//     }
+// });
+Vue.component('nama', {
+    template: " <input type='text' placeholder = 'masukkan Nama' @blur = 'validasi'> </input> ",
+    methods: {
+        validasi() {
+            this.$emit('applied')
+        }
+    }
 });
 var app = new Vue({
     el: '#app',
@@ -387,10 +403,16 @@ var filter = new Vue({
         }
     }
 });
-var component=new Vue({
-    el:'#app10',
-    data:{
-        pesan:'belajar vue.js',
-        pesan2:'semangat'
+var component = new Vue({
+    el: '#app10',
+    data: {
+        pesan: 'belajar vue.js',
+        pesan2: 'semangat',
+        valid: false
+    },
+    methods: {
+        validasi() {
+            this.valid = true;
+        }
     }
 });
